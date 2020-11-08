@@ -1,0 +1,87 @@
+@import url(/normalize.css);
+:root{
+    --fondo:#ccc;
+    --titulo:16px;
+    --primaryColor: blue;
+}
+*{
+    margin:0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 5px 10%;
+}
+h1{
+    background-color: var(--fondo);
+    font-size: var(--titulo);
+}
+
+header{
+    grid-area: header;
+}
+header nav{
+    display: flex;
+    justify-content: space-around;
+}
+header nav a{
+    text-decoration: none;
+    padding: 0 5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: bisque;
+    border:1px solid #ccc;
+}
+section{
+    grid-area: section;
+}
+aside{
+    grid-area: aside;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area:footer;
+}
+#grid-container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header     header      header"
+    "section    section     aside"
+    "main       main        aside"
+    "footer     footer      footer";
+}
+header, main, aside, footer, section{
+    background:lightblue;
+    border:1px solid black;
+    width: 100%;
+    min-height: 200px;
+}
+main{
+    min-height: 400px;
+}
+@media (max-width:1600px){
+    body{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:500px){
+    body{
+        font-size: 24px;
+    }
+    #grid-container{
+        grid-template-areas: 
+        "header     header      header"
+        "main       main        main"
+        "aside      aside       aside"
+        "footer     footer      footer";
+     
+    }
+    section{
+        display:none;
+    }
+}

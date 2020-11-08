@@ -1,0 +1,125 @@
+*{
+    user-select: none;
+    margin:0;
+    border:none;
+}
+body{
+    background-color:#f1f1f1;
+}
+body > div{
+    max-width: 900px;
+    margin:auto;
+}
+body > div > div{
+    background-color: white;
+    display:grid;
+    grid-template-columns:auto 48%;
+    grid-gap: 15px;
+    margin:auto 5%;
+}
+
+/*email*/
+body > div > div > div:first-child{
+    grid-column:1 / span 2;
+    text-align: center;
+    font-size: .7em;
+    color:gray;
+}
+/*logo*/
+body > div > div > div:nth-child(2) img{
+    width:150px;
+}
+/*publicidad*/
+body > div > div > div:nth-child(3){
+    text-align: right;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/*imagen*/
+    body > div > div > div:nth-child(4){
+        grid-column: 1 / span 2;
+    }
+    body > div > div > div:nth-child(4) img{
+        width:100%;
+    }
+/*parrafo 1*/
+body > div > div > div:nth-child(5){
+    grid-column: 1 / span 2;
+    font-size:.8em;
+    text-align:justify;
+    padding:0 20px;
+    line-height: 20px;
+}
+body > div > div > div:nth-child(6){
+    margin:0 0 0 20px;
+}
+body > div > div > div:nth-child(7){
+    margin:0 20px 0 0;
+}
+/*step 1*/
+
+    body > div > div > div:nth-child(6), body > div > div > div:nth-child(7){
+        background:#f0f0f0;
+        text-align:center;
+        font-size: .9em;
+        font-family: Arial;
+    }
+    body > div > div > div:nth-child(6) img, body > div > div > div:nth-child(7) img{
+        display: block;
+        margin: 10px auto;
+    }
+    body > div > div > div:nth-child(6) span{
+        display: block;
+        margin: 10px 8px;
+        font-weight: bold;
+    }
+    body > div > div > div:nth-child(6) ul{
+        margin:20px 0 50px 0;
+    }
+    body > div > div > div:nth-child(6) ul li{
+        margin:10px 20px;
+    }
+/*step 2*/
+    body > div > div > div:nth-child(7) span{
+        display: block;
+        margin: 10px 25px;
+        text-align: center;
+        font-weight: bold;
+        line-height: 25px;
+        font-size: 1.1em;
+    }
+    body > div > div > div:nth-child(7) p{
+        display: block;
+        margin: 10px 25px;
+        text-align: center;
+        line-height: 25px;
+        text-align: center;
+    }
+    body > div > div > div:nth-child(7) p a{
+        display: block;
+    }
+/*parrafo 2*/
+    body > div > div > div:nth-child(8){
+        grid-column: 1 / span 2;
+    }
+    body > div > div > div:nth-child(8) p{
+        font-size: .8em;
+        text-align: justify;
+        line-height: 20px;
+        padding:0 20px;
+    }
+    body > div > div > div:nth-child(8) span{
+        font-weight: bold;
+    }
+    body > div > div > div:nth-child(8) h4{
+        margin:30px 0 50px 0;
+        text-align: center;
+        color: #ff9000;
+    }
+/*IMPORTANTE*/
+* body > div> div > div:nth-child(9){
+    grid-column: 1 / span 2;
+    font-size: 9px;
+    text-align: justify;
+    padding:10px;
+    background: #ebebeb;
+}

@@ -1,0 +1,442 @@
+:root{
+    --fieldset-borders:1px solid white;
+}
+@import url("normalize.css");
+/***** Media Queries *******/
+@media (max-width:768px){
+    header{
+        grid-template-areas:"area2 area2 area2"!important;
+    }
+    header > div:nth-child(2){
+        border-radius: 0!important;
+    }
+    div#proyectos{
+        grid-template-columns: auto auto!important;
+    }
+    /*Presentacion*/
+    main > div:first-child{
+        grid-area:portada;
+        margin:auto 5%!important;
+    }
+    /*contacto leyenda*/
+    fieldset > legend{
+        padding: 1% 4% 1% 6%!important;
+    }
+    form > input[type="text"], form > input[type="email"]{
+        width: 100%!important;
+        transition: .5s;
+    }
+    form > div > *{
+        font-size: 1.2em!important;    
+    }
+    div#about_us{
+        grid-template-columns: auto auto!important;
+    }
+    div#about_us h1{
+        grid-column: 1 / span 2!important;
+    }
+}
+@media (max-width:600px){
+    body{
+        background:url(../img/bg_mobile.jpg) no-repeat!important;
+        background-size:cover!important;
+        background-attachment: fixed!important;
+    }
+    /*menu*/
+        header > div:nth-child(2){
+            grid-template-areas: "menu"!important;
+            grid-template-columns: 100%!important;
+        }
+        header > div:nth-child(2) > div:first-child img{
+            display: none;
+        }
+        header > div:nth-child(2) > div:last-child a{
+            font-size: 1em!important;
+        }
+    div#proyectos > div:hover{
+        transform: scale(1.05)!important;
+    }
+    div#proyectos{
+        grid-template-columns: auto!important;
+    }
+    main {
+        grid-template-rows: 85vh 6vh!important;
+    }
+    /*barra deslizante*/
+        main > div:last-child{
+            margin: 0!important;
+        }
+    /*contacto leyenda*/
+    fieldset > legend{
+        padding: 1% 8% 1% 10%!important;
+        text-align: center;
+    }
+    form > div > *{
+        padding:.5em 1.2em!important;
+        font-size: 1em!important;
+    }
+    div#about_us{
+        grid-template-columns: auto!important;
+    }
+    div#about_us h1{
+        grid-column: 1 / span 1!important;
+    }
+}
+/***************************/
+
+/***** Animaciones CSS *****/
+@keyframes header{
+    0%{
+        top: -100%;
+    }
+    100%{
+        top:0;
+    }
+
+}
+@keyframes presentacion{
+    0%{
+        transform:scale(0);
+    }
+    50%{
+        transform:scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes barra{
+    0%{
+        transform:scale(0) rotateZ(360deg);
+    }
+    100%{
+        transform:scale(1) rotateZ(0deg);
+    }
+}
+@keyframes formulario{
+    0%{
+        transform:translateX(-55%) scale(0);
+    }
+    100%{
+        transform:translateX(0) scale(1);
+    }
+}
+/**************************/
+
+/**********FUENTES*********/
+@font-face{
+    font-family: "Parisienne";
+    src:url("../fonts/Parisienne-Regular.ttf");
+}
+/**************************/
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+-webkit-user-select: none;
+}
+body{
+    background:url(../img/bg.jpg) no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+/*header*/
+    /*laterales*/
+        header > div:first-child{
+            grid-area:area1;
+        }
+        header > div:last-child{
+            grid-area:area3;
+        }
+    /*menu*/
+        /*logo*/
+            header > div:nth-child(2) > div:first-child{
+                grid-area:logo;
+                text-align: center;
+            }
+            header > div:nth-child(2) > div:first-child img{
+                width: 6em;
+                margin: 0.57em;
+                cursor: pointer;
+            }
+        /*menu*/
+            header > div:nth-child(2) > div:last-child > a:before{
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 900;
+                margin:0 5% 0 0;
+            }
+            header > div:nth-child(2) > div:last-child > a:first-child:before{
+                content:"\f015";
+            }
+            header > div:nth-child(2) > div:last-child > a:nth-child(2):before{
+                content:"\f2b9";
+            }
+            header > div:nth-child(2) > div:last-child > a:last-child:before{
+                content:"\f0c0";
+            }
+            header > div:nth-child(2) > div:last-child{
+                grid-area:menu;
+                display: flex;
+                justify-content: space-around;
+            }
+            header > div:nth-child(2) > div:last-child a{
+                text-decoration: none;
+                color:rgba(0,0,0,.5);
+                font-size: 1.5em;
+                margin:auto;
+                padding: 1% 5%;
+                border-bottom: 1px solid transparent;
+                transition: .3s;
+                outline: none;
+            }
+            header > div:nth-child(2) > div:last-child a:hover{
+                border-bottom:1px solid black;
+                transition: .3s ease-in-out;
+            }
+            header > div:nth-child(2){
+                grid-area:area2;
+                background:rgba(255,255,255,.8);
+                border-radius:0 0 20px 20px;
+                display:grid;
+                grid-template-areas: "logo menu";
+                grid-template-columns: 10% 90%;
+            }
+        header{
+            position: fixed;
+            width:100%;
+            height:10%;
+            display: grid;
+            grid-template-areas: "area1 area2 area3";
+            grid-template-columns: 3% 94% 3%;
+            animation-name:header;
+            animation-duration:1s;
+            z-index: 1;
+        }
+
+/*main*/
+    /*Presentacion*/
+        main > div:first-child{
+            grid-area:portada;
+            margin:auto;
+            animation-name: presentacion;
+            animation-duration: .5s;
+        }
+        main > div:first-child > div{
+            padding:6% 6% 6% 14%;
+            background:white;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+        }
+        main > div:first-child:before{
+            content: "";
+            padding: 8%;
+            background: url(../img/perfil.jpeg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+            border-radius: 100%;
+            filter: drop-shadow(2px 2px 2px rgba(0,0,0,.5));
+        }
+    /*indicador de desplazamiento*/
+        main > div:last-child{
+            background:rgba(255,255,255,.9);
+            grid-area:deslizar;
+            margin: 0 30%;
+            border-radius:20px 20px 0 0;
+            box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+            text-align: center;
+            cursor: pointer;
+            padding: .5%;
+            animation-duration:2s;
+            animation-name:barra;
+        }
+        main > div:last-child i{
+            font-size: 2em;
+            text-shadow: 0px 1px 5px black;
+            color: #071d2b;
+        }
+    main{
+        display:grid!important;
+        grid-template-areas:"portada" "deslizar";
+        grid-template-columns: 100%;
+        grid-template-rows: 95vh 5vh;
+    }
+/*proyectos*/
+    div#proyectos{
+        padding: 5% 3%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin: auto;
+        gap:50px;
+    }
+    div#proyectos > div#Games_3D{
+        background-image:url(../img/3d_juegos_wal.jpeg);
+    }
+    div#proyectos > div#encuestas{
+        background-image:url(../img/forms_wal.jpeg);
+    }
+    div#proyectos > div#Marvel{
+        background-image:url(../img/marvel_wal.jpeg);
+    }
+    div#proyectos > div#McAfee{
+        background-image:url(../img/mcafee_wal.jpeg);
+    }
+    div#proyectos > div#newletters{
+        background-image:url(../img/newsletters_wal.jpeg);
+    }
+    div#proyectos > div#Urban_fashion{
+        background-image:url(../img/fashion_wal.png);
+    }
+    div#proyectos > div#plantillas{
+        background-image:url(../img/plantillas_wal.jpeg);
+    }
+    div#proyectos > div{
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px black;
+        cursor: pointer;
+        transition: 1s;
+        background-size:cover;
+        background-repeat: no-repeat;
+        color:white;
+        display:grid;
+        grid-template-areas: "titulo" "texto" "autor";
+        grid-template-columns: 100%;
+        grid-template-rows: 15% 70% 15%;
+    }
+    div#proyectos > div:hover{
+        transform: scale(1.1);
+        transition: 1s;
+    }
+    div#proyectos > div h2{
+        text-shadow: 0px 1px 3px black;
+        margin:2% 0;
+        text-align: center;
+    }
+    div#proyectos > div p{
+        margin:4em 20px;
+        text-align:left;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    }
+    div#proyectos > div > div:last-child{
+        padding: 10px;
+        background: rgba(0,0,0,.5);
+        border-radius: 0 0 10px 10px;
+    }
+    div#proyectos > div > div:last-child:before{
+        content:"\f007";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        margin:0 5% 0 0;
+    }
+
+
+/********************CONTACTO********************/
+
+
+    fieldset{
+        margin: 15vh 3%;
+        border-radius: 20px;
+        border:none;
+        border-top: var(--fieldset-borders);
+        border-bottom:var(--fieldset-borders);
+        background: rgba(255,255,255,.2);
+        box-shadow: 1px 1px 10px rgb(0, 0, 0) inset;
+        position: absolute;
+        width: 94%;
+        padding: 2em!important;
+        animation-name: formulario;
+        animation-duration: 2s;
+    }
+    fieldset > legend{
+        background: #b3b3b3;
+        padding: 1% 2%;
+        border-radius: 10px 50px;
+        font-family: "Parisienne",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size:1.5em;
+        border: 2px ridge white;
+        color: rgba(0,0,0,.3);
+        -webkit-text-stroke: .5px rgba(0,0,0,.5);
+    }
+    form > *{
+        display: block;
+        margin:1em 0!important;
+        padding: 1em 2em;
+    }
+    form > input[type="text"], form > input[type="email"], form > textarea{
+        width: 70%;
+        background: rgba(0,0,0,.3);
+        border-radius:10px;
+        box-shadow: 1px 1px 10px rgba(255,255,255,.5) inset;
+        border:transparent;
+        color:white;
+    }
+    form > input[type="text"], form > input[type="email"]{
+        transition: .5s;
+    }
+    form textarea{
+        width: 100%;
+        resize: vertical;
+        min-height: 20em;
+    }
+    form > input[type="text"]:focus, form > input[type="email"]:focus, form > textarea:focus{
+        box-shadow: 2px 2px 10px rgba(255, 255, 255,.5),1px 1px 10px rgba(255,255,255,.5) inset;
+    }
+    form > div{
+        display:flex;
+        width: 100%;
+        justify-content: center;
+    }
+    form > div > *{
+        padding:.8em 3em;
+        margin: 0 2%;
+        background: gray;
+        border: 2px ridge white;
+        color: rgba(0,0,0,.3);
+        -webkit-text-stroke: .5px rgba(0,0,0,.5);
+        border-radius: 30%;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    form > div > *:focus{
+        border:none;
+        box-shadow:1px 1px 5px rgba(0,0,0,.5) inset;
+    }
+
+/***********************ABOUT US***********************/
+
+    div#about_us{
+        padding: 5% 3%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin: auto;
+        gap:50px;
+    }
+    div#about_us h1{
+        text-align: center;
+        background: white;
+        border-radius: 20px 20px 0 0;
+        padding:.5em;
+    }
+    div#about_us > div{
+        text-align: center;
+    }
+    div#about_us h1{
+      grid-column: 1 / span 3;
+    }
+    div#about_us h3{
+        margin:1em;
+        background: white;
+        padding: 1em;
+        border-radius: 100%;
+        box-shadow: 10px 10px 5px rgba(0,0,0,.5);
+    }
+    div#about_us img{
+        width: 50%;
+        margin: auto;
+        border-radius: 500px;
+        box-shadow: 10px 10px 5px rgba(0,0,0,.5);
+    }

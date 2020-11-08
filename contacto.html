@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | DigitalEvolution</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body id="body">
+    <header>
+        <div></div>
+        <div>
+            <div><a href="/"><img src="img/DigitalEvolution.png" id="logo"></a></div>
+            <div>
+                <a href="/">Home</a>
+                <a href="./contacto.html">Contact</a>
+                <a href="#about_us">About</a>
+            </div>
+        </div>
+        <div></div>
+    </header>
+    <div>
+        <fieldset>
+            <legend>contacta conmigo</legend>
+            <form method="POST" action="enviado.php">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="mensaje" contenteditable required></textarea>
+                <div>
+                    <input type="submit" name="enviar" value="Enviar" id="enviar_form">
+                    <input type="reset" value="Borrar">
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>

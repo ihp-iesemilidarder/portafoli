@@ -1,0 +1,206 @@
+@media not (max-width:768px) { /*pantallas desktop > 768px*/
+    table#newsletter_ING{
+        max-width: 700px;
+        margin: auto!important;
+    }
+}
+*{
+    user-select:none;
+}
+/*texto email*/
+table#newsletter_ING thead td{
+    text-align: center!important;
+    padding:5% 0;
+}
+/*estilos principales de la tabla*/
+table#newsletter_ING{
+    margin: 0;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse; /*solapamos el borde exterior con los interiores (los de td)*/
+}
+table#newsletter_ING td{
+    border-collapse: collapse;
+}
+/*damos estilos al logo ING*/
+table#newsletter_ING tr:first-child > td:first-child img{
+    width: 60%;
+    margin:0;
+}
+
+/*estilos al string "Publicidad"*/
+table#newsletter_ING tr:first-child > td:last-child{
+    text-align: right;
+    color:gray;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+/*portada*/
+    table#newsletter_ING tr:nth-child(2){
+        background-color:#ff6201;
+    }
+    table#newsletter_ING tr:nth-child(2) > td{
+        background-image: url(../img/portada.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 18%;
+    }
+    /*pancarta*/
+        table#newsletter_ING tr.pancarta{
+            background-color: #ff6201;
+            color:white;
+            text-align: center;
+        }
+        /*titulo*/
+        table#newsletter_ING tr.pancarta th{
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+        /*preaprobados*/
+            table#newsletter_ING tr:nth-child(4)> td{
+                padding: 15px 0;
+            }
+            table#newsletter_ING tr:nth-child(4) div:nth-child(2){
+                font-weight: bold;
+                text-decoration: line-through;
+            }
+            table#newsletter_ING tr:nth-child(4) div:last-child{
+                color: black;
+                font-weight:bold;
+            }
+        /*fecha*/
+        table#newsletter_ING tr.pancarta:nth-child(5) td{
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        /*subscripcion*/
+            table#newsletter_ING tr.pancarta:nth-child(6) td{
+                padding: 10px 0;
+            }
+            table#newsletter_ING tr.pancarta:nth-child(6) input{
+                background-color:transparent;
+                border:none;
+                width: 40%;
+                height: 50px;
+                background-image: url("../img/btn-1.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            table#newsletter_ING tr.pancarta:nth-child(6) input:hover{
+                cursor: pointer;
+            }
+        /*curva pancarta*/
+            table#newsletter_ING tr:nth-child(7) img{
+                width: 100%;
+            }
+            table#newsletter_ING tr:nth-child(7) td{
+                padding: 0;
+            }
+
+/*titulo Navidad*/
+table#newsletter_ING tr:nth-child(8) > td{
+    padding: 5px 0 20px 15px;
+    font-weight: bold;
+    font-size: 1.3em;
+    color:#ff6201;
+}
+/*parrafo*/
+    table#newsletter_ING tr:nth-child(9) td {
+        margin:10px;
+    }
+    table#newsletter_ING tr:nth-child(9) p{
+        text-align: justify;
+        line-height: 25px;
+        font-size: 1.1em;
+    }
+/*items*/
+    table#newsletter_ING tr:nth-child(10) td{
+        width: 2px;
+        padding:3% 0;
+    }
+    table#newsletter_ING tr:nth-child(10) td:before{
+        content:"";
+        background-repeat: no-repeat;
+        padding: 0 8%;
+        background-size: contain;
+        font-size: 1.5em;
+    }
+    table#newsletter_ING tr:nth-child(10) td:first-child:before{
+        background-image: url("../img/icon-mobile.png");
+    }
+    table#newsletter_ING tr:nth-child(10) td:nth-child(2):before{
+        background-image: url("../img/icon-moneybox.png");
+    }
+    table#newsletter_ING tr:nth-child(10) td:last-child:before{
+        background-image: url("../img/icon-clock.png");
+        background-position: right;
+        border-left:1px solid lightgray;
+    }
+    table#newsletter_ING tr:nth-child(10) td:last-child span{
+        padding: 0 0 0 10px;
+    }
+/*boton2_naranja*/
+    table#newsletter_ING tr:nth-child(11) td{
+        padding:10px 0;
+        text-align: center;
+    }
+    table#newsletter_ING tr:nth-child(11) input{
+        text-align: center;
+        cursor: pointer;
+        width: 40%;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        background-image: url("../img/btn-2.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+/*redes sociales*/
+    table#newsletter_socials{
+        text-align: center;
+        margin:auto;
+        padding: 0 0 20px 0;
+    }
+    table#newsletter_socials td{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 2em;
+        height: 2em;
+        cursor: pointer;
+    }
+    /*facebook*/
+    table#newsletter_socials td:first-child{
+        background-image: url("../img/facebook.gif");
+    }
+    /*twitter*/
+    table#newsletter_socials td:nth-child(2){
+        background-image: url("../img/twitter.gif");
+    }
+    /*youtube*/
+    table#newsletter_socials td:nth-child(3){
+        background-image: url("../img/youtube.gif");
+    }
+    /*linkedin*/
+    table#newsletter_socials td:last-child{
+        background-image: url("../img/in.gif");
+    }
+
+/*condiciones*/
+table#newsletter_ING #condiciones td{
+    background-color:#f0f0f0;
+    color:gray;
+    padding: 40px 0;
+}
+table#newsletter_ING #condiciones p{
+    padding: 0 18px;
+    line-height: 20px;
+    font-size: 10pt;
+    text-align: justify;
+}

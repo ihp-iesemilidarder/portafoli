@@ -1,0 +1,170 @@
+:root{
+    --color_header:rgb(249, 223, 70);
+    --color_header_content:rgb(204, 206, 210);
+}
+@import url("normalize.css");
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-user-select: none;
+}
+body #hl1{
+    grid-area: hl1;
+    background: var(--color_header);
+}
+body #hh1{
+    grid-area: hh1;
+    background: var(--color_header);
+}
+body #hl2{
+    grid-area: hl2;
+    background: var(--color_header);
+}
+body #con > div:first-child{
+    grid-area: co1;
+    background:var(--color_header_content);
+}
+body #con > div:nth-child(2) > div:not(:hover){
+    transition: 1s;
+}
+body #con > div:nth-child(2) > div:hover{
+    cursor: pointer;
+    transition:1s;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+}
+body #con > div:nth-child(2){
+    grid-area: co2;
+    display: grid;
+    gap: 20px;
+    margin: 20px;
+}
+body #con > div:nth-child(2) > div > h3{
+    margin:3% 0 0 5%;
+    font-size:2vw;
+}
+body #con > div:nth-child(2) > div:nth-child(odd){
+    border:5px solid lightblue;
+}
+body #con > div:nth-child(2) > div:nth-child(even){
+    border:5px solid #e6d7ad;
+}
+body #con > div:nth-child(2) > div:first-child{
+   background-image:url(../img/calendar.png);
+   background-repeat:no-repeat;
+   background-size:cover;
+}
+body #con > div:nth-child(2) > div:nth-child(2){
+   background-image:url(../img/gestion_administrativa.jpg);
+   background-repeat:no-repeat;
+   background-size:cover;
+}
+body #con > div:nth-child(2) > div:last-child{
+   background-image:url(../img/home_cloud.png);
+   background-repeat:no-repeat;
+   background-size:cover;
+   background-position:center;
+}
+body #con > div:nth-child(2) > div:last-child h3{
+    color:white;
+}
+body #con > div:last-child{
+    grid-area: footer;
+    background: var(--color_header_content);
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+}
+body #con{
+    grid-area: con;
+    display: grid;
+    grid-template-areas: "co1" "co2" "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 15vh 1fr 10vh;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+}
+body #bl1{
+    grid-area: bl1;
+}
+body #bl2{
+    grid-area: bl2;
+}
+body > div{
+    background:rgba(249, 223, 70,.2);
+    display: grid;
+    grid-template-areas: 
+    "hl1 hh1 hh1 hh1 hh1 hh1 hh1 hh1 hl2"
+    "hl1 hh1 hh1 hh1 hh1 hh1 hh1 hh1 hl2"
+    "hl1 con con con con con con con hl2"
+    "hl1 con con con con con con con hl2"
+    "hl1 con con con con con con con hl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2"
+    "bl1 con con con con con con con bl2";
+    grid-template-columns: 100%;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(20,5vh);
+}
+body #con > div:first-child h1{
+    font-size: 3em;
+    text-align: center;
+    margin: 5.2vh 0;
+    color:var(--color_header_content);
+    text-shadow: 0px 0px 10px rgba(0,0,0,.5);
+}
+body #con > div:first-child h1:before{
+    content: "📚 ";
+}
+@media (max-width:600px){
+    body #con > div:first-child h1{
+        font-size: 2em;
+    }
+    body #con > div:last-child{
+        font-size: 10px!important;
+        padding: 5px!important;
+    }
+    body #con > div:nth-child(2) h3{
+        font-size:4vw!important;
+    }
+    body > div{
+        background:rgba(249, 223, 70,.2);
+        display: grid;
+        grid-template-areas: 
+        "hl1 hh1 hh1 hh1 hh1 hh1 hh1 hh1 hh1 hh1 hh1 hl2"
+        "hl1 hh1 hh1 hh1 hh1 hh1 hh1 hh1 hh1 hh1 hh1 hl2"
+        "hl1 con con con con con con con con con con hl2"
+        "hl1 con con con con con con con con con con hl2"
+        "hl1 con con con con con con con con con con hl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2"
+        "bl1 con con con con con con con con con con bl2";
+        grid-template-columns: 100%;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: repeat(21,5vh);
+    }
+}

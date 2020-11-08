@@ -1,0 +1,214 @@
+*{
+    margin:0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+body > main, body > footer{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+/*portada*/
+    body > section{
+        background:black;
+        height: 100vh;
+        background-image: url(../img/mcafee-total-protection.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        display: grid;
+        grid-template-areas: 'columna1 columna2';
+        grid-template-columns: 50%;
+        box-shadow: -20px 0px 20px rgb(0, 0,0) inset;
+    }
+    /*top div fijo*/
+        body > section > header{
+            position: absolute;
+            top:0;
+            display: flex;
+            width: 100%;
+            background: black;
+            height: 7vh;
+            justify-content: space-between;
+            padding:0 12%;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+        body > section > header > div{
+            display: inline-block;
+            color:white;
+            width: 50%;
+            margin:auto 0;
+        }
+        body > section > header > div img{
+            width: 150px;
+        }
+        body > section > header > div p{
+            font-size:1.2rem;
+        }
+    /*columna1 {empty}*/
+        body > section > div:first-child{
+            grid-area: columna1;
+        }
+    /*columna2*/
+        #portada_texto{
+            grid-area: columna2;
+            background-image: linear-gradient(to right, rgba(0,0,0,.2),black);
+            padding: 7vh 5%;
+            position: relative;
+        }
+        #portada_texto > p, #portada_texto > h1{
+            color: white;
+            font-family: Arial;
+        }
+        #portada_texto > h1:first-child{
+            font-size: 3rem;
+            margin: .1em 0 0 0;
+            font-weight: 100;
+        }
+        #portada_texto > p#descripcion{
+            font-size: 1.5rem;
+            margin:10% 0 5% 0;
+        }
+        #portada_texto > p#precio{
+            font-size: 4rem;
+        }
+        #portada_texto > p#precio+p{
+            font-size: 1.5rem;
+            margin: 5% 0;
+        }
+        #portada_texto > a{
+            font-size: 2rem;
+            text-decoration: none;
+            color:white;
+            background: red;
+            padding: 2% 5%;
+            border-radius: 5px;
+            border:1px solid transparent;
+            outline: none;
+            position: absolute;
+            margin:10% 0;
+            transition: .3s;
+        }
+        #portada_texto > a:hover{
+            font-size: 2rem;
+            text-decoration: none;
+            color:red;
+            background: transparent;
+            padding: 2% 5%;
+            border-radius: 5px;
+            border:1px solid red;
+            transition: .3s;
+        }
+        #portada_texto > p#info{
+            font-size: 1rem;
+            margin:40% 0 0 0;
+        }
+        #portada_texto ul{
+            list-style: none;
+            color:white;
+            margin:2% 0;
+        }
+        #portada_texto ul li{
+            display: inline;
+            padding:0 5px;
+            cursor:pointer;
+            border-right: 1px solid white;
+        }
+        #portada_texto ul li:hover{
+            border-bottom: 1px solid white;
+        }
+        #portada_texto ul li:last-child{
+            border-right: none;
+        }
+/*main*/
+    body > main > #lema1{
+        grid-area: lema1;
+        padding: 15% 0 10% 30%;
+    }
+    body > main > #lema2{
+        grid-area: lema2;
+        background-image: url(../img/devices.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left bottom;
+    }
+    body > main > #item1{grid-area: item1;}
+    body > main > #item2{grid-area: item2;}
+    body > main > #item3{grid-area: item3;}
+    body > main > footer{grid-area: footer;}
+    body > main{
+        display: grid;
+        height: 10vh;
+        grid-template-areas: 'lema1 lema1 lema1 lema2 lema2 lema2' 'item1 item1 item2 item2 item3 item3' 'footer footer footer footer footer footer';
+        grid-template-columns: calc(50%/3) calc(50%/3) calc(50%/3);
+    }
+    /*lema1*/
+        body > main > #lema1 h3{
+            text-align: left;
+            font-size: 1.7rem;
+        }
+        body > main > #lema1 p{
+            margin:20px 0 0 0;
+            text-align: left;
+            text-align: justify;
+            line-height: 25px;
+        }
+    /*items*/
+        body > main > div[id*="item"]{
+            padding: 10%;
+            text-align: center;
+            line-height: 25px;
+        }
+        body > main > div[id*="item"] h2{
+            margin:10% 0;
+        }
+/*footer*/
+    body footer{
+        background: #53565a;
+        padding:2% 5%;
+        color:white;
+    }
+    body footer > p{
+        padding:0 0 2% 0;
+    }
+    body footer > p:last-child{
+        border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+/*cookies*/
+    body div#cookies{
+        display:none;
+        background: white;
+        position: fixed;
+        width:100%;
+        bottom: 0;
+        margin: 1% 0;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    }
+    body div#cookies *{
+        text-align: center;
+    }
+    body div#cookies h3{
+        margin:2% 10%;
+    }
+    body div#cookies p{
+        margin:1.5% 10%;
+    }
+    body div#cookies button{
+        background: black;
+        color: white;
+        border:1px solid transparent;
+        padding: 10px 40px;
+        border-radius:5px;
+        margin:1% 0;
+        cursor: pointer;
+        transition: .5s;
+    }
+    body div#cookies button:hover{
+        background: white;
+        color: black;
+        border:1px solid black;
+        transition: .5s;
+    }

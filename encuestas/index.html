@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 10% 20%;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend>Formulario</legend>
+            <p>
+                <label>Nombre:</label>
+                <input type="text" name="nombre-cliente" placeholder="Pon tu nombre"/>
+            </p>
+            <p>
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Contraseña"/>
+            </p>
+            <p>
+                <label>Idioma:</label>
+                <select>
+                    <option value="ES">Castellano</option>
+                    <option value="CA">Catalán</option>
+                    <option value="EN">English</option>
+                </select>
+            </p>
+            <p>
+                <label>Película preferida</label>
+                <input type="radio" name="pelicula" value="Matrix"> Matrix
+                <input type="radio" name="pelicula" value="Terminator"> Terminator
+                <input type="radio" name="pelicula" value="Ejem"> Ejem
+            </p>
+            <p>
+                <label>Aficiones</label>
+                <input type="checkbox" name="jugar" value="jugar"> Jugar
+                <input type="checkbox" name="trabajar" value="trabajar"> Trabajar
+                <input type="checkbox" name="otros" value="otros"> Otros
+            </p>
+            <p>
+                <label>Comentario:</label>
+                <textarea name="comentario" id="comentario"></textarea>
+            </p>
+            <p>
+                <label>Email:</label>
+                <input type="email" name="email">
+            </p>
+            <p>
+                <label>Telefono:</label>
+                <input type="tel" name="telefono">
+            </p>
+            <p>
+                <label>Edad:</label>
+                <input type="number" name="number" min="1">
+            </p>
+            <p>
+                <label>Fecha:</label>
+                <input type="date" name="date">
+            </p>
+            <input type="submit" value="Enviar datos">
+            <input type="reset" value="Eliminar">
+        </fieldset>
+    </form>
+</body>
+</html>

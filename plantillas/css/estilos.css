@@ -1,0 +1,183 @@
+:root{
+    --fieldset-borders:1px solid white;
+}
+@import url("/css/normalize.css");
+/***** Media Queries *******/
+@media (max-width:768px){
+    header{
+        grid-template-areas:"area2 area2 area2"!important;
+    }
+    header > div:nth-child(2){
+        border-radius: 0!important;
+    }
+    div#proyectos{
+        grid-template-columns: auto auto!important;
+    }
+}
+@media (max-width:600px){
+    body{
+        background:url(/img/bg_mobile.jpg) no-repeat!important;
+        background-size:cover!important;
+        background-attachment: fixed!important;
+    }
+    /*menu*/
+        header > div:nth-child(2){
+            grid-template-areas: "menu"!important;
+            grid-template-columns: 100%!important;
+        }
+        header > div:nth-child(2) > div:first-child img{
+            display: none;
+        }
+        header > div:nth-child(2) > div:last-child a{
+            font-size: 1em!important;
+        }
+    div#proyectos > div:hover{
+        transform: scale(1.05)!important;
+    }
+    div#proyectos{
+        grid-template-columns: auto!important;
+    }
+}
+/***************************/
+
+/***** Animaciones CSS *****/
+@keyframes header{
+    0%{
+        top: -100%;
+    }
+    100%{
+        top:0;
+    }
+
+}
+/**************************/
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+-webkit-user-select: none;
+}
+body{
+    background:url(/img/bg.jpg) no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+/*header*/
+    /*laterales*/
+        header > div:first-child{
+            grid-area:area1;
+        }
+        header > div:last-child{
+            grid-area:area3;
+        }
+    /*menu*/
+        /*logo*/
+            header > div:nth-child(2) > div:first-child{
+                grid-area:logo;
+                text-align: center;
+            }
+            header > div:nth-child(2) > div:first-child img{
+                width: 6em;
+                margin: 0.57em;
+                cursor: pointer;
+            }
+        /*menu*/
+            header > div:nth-child(2) > div:last-child > a:before{
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 900;
+                margin:0 5% 0 0;
+            }
+            header > div:nth-child(2) > div:last-child > a:first-child:before{
+                content:"\f015";
+            }
+            header > div:nth-child(2) > div:last-child > a:nth-child(2):before{
+                content:"\f2b9";
+            }
+            header > div:nth-child(2) > div:last-child > a:last-child:before{
+                content:"\f0c0";
+            }
+            header > div:nth-child(2) > div:last-child{
+                grid-area:menu;
+                display: flex;
+                justify-content: space-around;
+            }
+            header > div:nth-child(2) > div:last-child a{
+                text-decoration: none;
+                color:rgba(0,0,0,.5);
+                font-size: 1.5em;
+                margin:auto;
+                padding: 1% 5%;
+                border-bottom: 1px solid transparent;
+                transition: .3s;
+                outline: none;
+            }
+            header > div:nth-child(2) > div:last-child a:hover{
+                border-bottom:1px solid black;
+                transition: .3s ease-in-out;
+            }
+            header > div:nth-child(2){
+                grid-area:area2;
+                background:rgba(255,255,255,.8);
+                border-radius:0 0 20px 20px;
+                display:grid;
+                grid-template-areas: "logo menu";
+                grid-template-columns: 10% 90%;
+            }
+    header{
+        position: fixed;
+        width:100%;
+        height:10%;
+        display: grid;
+        grid-template-areas: "area1 area2 area3";
+        grid-template-columns: 3% 94% 3%;
+        animation-name:header;
+        animation-duration:1s;
+        z-index: 1;
+    }
+
+/*main*/
+/*proyectos*/
+    div#proyectos{
+        padding: 10% 3% 5% 3%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin: auto;
+        gap:50px;
+    }
+    div#proyectos > div{
+        background:lightblue;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px black;
+        cursor: pointer;
+        transition: 1s;
+        background-size:cover;
+        background-repeat: no-repeat;
+        color:white;
+        display:grid;
+        grid-template-areas: "titulo" "texto" "autor";
+        grid-template-columns: 100%;
+        grid-template-rows: 15% 70% 15%;
+    }
+    div#proyectos > div:hover{
+        transform: scale(1.1);
+        transition: 1s;
+    }
+    div#proyectos > div h2{
+        text-shadow: 0px 1px 3px black;
+        margin:2% 0;
+        text-align: center;
+    }
+    div#proyectos > div > div:nth-child(2){
+        margin:4em 20px;
+    }
+    div#proyectos > div > div:last-child{
+        padding: 10px;
+        background: rgba(0,0,0,.5);
+        border-radius: 0 0 10px 10px;
+    }
+    div#proyectos > div > div:last-child:before{
+        content:"\f007";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        margin:0 5% 0 0;
+    }

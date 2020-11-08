@@ -1,0 +1,310 @@
+*{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    user-select:none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+}
+body{
+    background-color: #ebebeb;
+}
+body > div{
+    max-width:566px;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+/*configuracion global tabla*/
+    table#ebay_newsletter td[data-padding="True"]{
+        padding: 20px 0 20px 20px;
+    }
+    table#ebay_newsletter{
+        width: 100%;
+        height: 6%;
+    }
+    table#ebay_newsletter, table#ebay_newsletter td{
+        /*border: 1px solid black;*/
+        border-collapse: collapse;
+    }
+/*header*/
+    table#ebay_newsletter tr.data-header, table#ebay_newsletter tr.data-header+tr{
+        background-color: white;
+    }
+    /*logo*/
+        table#ebay_newsletter tr.data-header > td:first-child{
+            width: 40%;
+            
+        }
+        table#ebay_newsletter tr.data-header > td:first-child img{
+            width: 100px;
+            margin:auto;
+        }
+    /*string proteccion*/
+        table#ebay_newsletter tr.data-header > td:last-child{
+            padding:5px 0;
+        }
+        table#ebay_newsletter tr.data-header > td:last-child div{
+            font-size:.7em;
+            margin:auto;
+            float:right;
+            color:gray;
+            padding:0 5px 0 0;
+        }
+        table#ebay_newsletter tr.data-header > td:last-child span{
+            cursor: pointer;
+        }
+        table#ebay_newsletter tr.data-header > td:last-child span:first-child{
+            border-right: 1px solid gray;
+            padding:0 5px;
+        }
+    /*vender strings*/
+        table#ebay_newsletter tr.data-header + tr{
+            font-size: .8em;
+            text-align:center;
+        }
+        table#ebay_newsletter tr.data-header + tr td{
+            cursor:pointer;
+            padding:0 0 8px 0;
+        }
+        table#ebay_newsletter tr.data-header + tr > td:first-child{
+            width:12%;
+        }
+        table#ebay_newsletter tr.data-header + tr > td:nth-child(2){
+            width:18%;
+        }
+        table#ebay_newsletter tr.data-header + tr > td:last-child{
+            width:28%;
+        }
+
+/*slider 1*/
+    table#ebay_newsletter tr#data-slides1{
+        background-image: url("../img/bg_portada_1200.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position:center;
+    }
+    table#ebay_newsletter tr#data-slides1 td{
+        height:385px;
+        position: relative;
+    }
+    /*titulo*/
+    table#ebay_newsletter tr#data-slides1 img{
+        width:56%;
+        position:absolute;
+        float:left;
+        top:20px;
+    }
+    /*vende tus viejos...*/
+    table#ebay_newsletter tr#data-slides1 h1{
+        width: 50%;
+        position: absolute;
+        float: left;
+        top: 80px;
+        padding: 0 0 0 20px;
+        color: #aa5404;
+    }
+    table#ebay_newsletter tr#data-slides1 p{
+        width: 50%;
+        position: absolute;
+        float: left;
+        bottom: 80px;
+        padding: 0 0 0 20px;
+        color: #aa5404;
+        font-weight: bold;
+    }
+    /*boton*/
+        table#ebay_newsletter tr#data-slides1 button{
+            position: absolute;
+            float: left;
+            bottom: 30px;
+            margin:0 20px;
+            padding: 8px 10px;
+            color: #aa5404;
+            font-weight: bold;
+            cursor:pointer;
+            background-color:transparent;
+            border:none;
+            border-top: 1px solid #aa5404;
+            border-bottom: 1px solid #aa5404;
+            font-weight: 100;
+        }
+        table#ebay_newsletter tr#data-slides1 button:after{
+            content: "";
+            background-image: url("../img/arrow.png");
+            background-repeat: no-repeat;
+            background-position: 10px 0;
+            padding: 5px 30px 0 0;
+            background-size: contain;
+            font-size: 0.6em;
+        }
+        table#ebay_newsletter tr#data-slides1 button:hover:after{
+            transition:.2s;
+            background-position: right;
+        }
+/*precios*/
+    table#ebay_newsletter tr#data-slides1 + tr td{
+        padding:1px 2px 5px 2px;
+    }
+    table#ebay_newsletter tr#data-slides1 + tr img{
+        width:100%;
+    }
+/*promocion*/
+    table#ebay_newsletter tr.promocion{
+        background-color: white;
+    }
+    table#ebay_newsletter tr.data-promocion td{
+        font-size:1.3em;
+        padding:30px 0 10px 20px;
+        font-weight:bold;
+        color:#592e17;
+    }
+    table#ebay_newsletter tr.data-promocion ~ tr td{
+        font-size:.9em;
+        color:#592e17;
+        list-style: none;
+    }
+    table#ebay_newsletter tr.data-promocion ~ tr td div{
+        padding:20px 13px 20px 0;
+    }
+    table#ebay_newsletter tr.data-promocion + tr td div{
+        padding:20px 13px 20px 60px;
+    }
+
+    table#ebay_newsletter tr.data-promocion ~ tr span:before{
+        content:"";
+        background-repeat:no-repeat;
+        background-size: contain;
+        background-position:center;
+        padding:3%;
+        margin: 0px 10px 0px 20px;
+        line-height: 3;
+    }
+    table#ebay_newsletter tr.data-promocion + tr span:before{
+        background-image:url("../img/01.png");
+        margin:0px 10px 0px -40px;;
+        padding: 3.5%;
+    }
+    table#ebay_newsletter tr.data-promocion + tr + tr span:before{
+        background-image:url("../img/02.png");
+        margin: 0px 10px 0px 10px;
+        padding: 3.5%;
+    } 
+    table#ebay_newsletter tr.data-promocion + tr + tr + tr span:before{
+        background-image:url("../img/03.png");
+    }
+    /*borders*/
+    table#ebay_newsletter tr.data-promocion + tr + tr div{
+        border-top:6px solid transparent;
+        border-bottom:6px solid transparent;
+        border-image: url("../img/line_1200.png") 30 round;
+        margin: 0 40px 0 10px;
+    }
+/*slider 2*/
+    table#ebay_newsletter tr#data-slides2{
+        background-image: url("../img/bg_envio_1200.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position:-2px center;
+        background-color: #f8e376;
+    }
+    table#ebay_newsletter tr#data-slides2 td{
+        height:261px;
+        position: relative;
+    }
+    /*titulo*/
+        table#ebay_newsletter tr#data-slides2 *{
+            position:absolute;
+        }
+        table#ebay_newsletter tr#data-slides2 h1{
+            width:250px;
+            margin:20px 0 30px 20px;
+            color:#aa5404;
+            top:0;
+        }
+        table#ebay_newsletter tr#data-slides2 p{
+            color:#aa5404;
+            top:150px;
+            font-weight:bold;
+            font-size:1em;
+            margin:0 0 0 20px;      
+            width:250px;
+        }
+        table#ebay_newsletter tr#data-slides2 button{
+            color:#aa5404;
+            top:200px;
+            font-size:1em;
+            margin:0 0 0 20px;      
+            padding:10px 10px;
+            background-color: transparent;
+            border:none;
+            border-top:1px solid #aa5404;
+            border-right:1px solid #aa5404;
+            border-bottom:1px solid #aa5404;
+            text-align:left;
+            cursor:pointer;
+        }
+        table#ebay_newsletter tr#data-slides2 button:after{
+            content:"";
+            background-image: url("../img/arrow.png");
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding:8px;
+            margin:0 0 0 10px;
+        }
+        table#ebay_newsletter tr#data-slides2 button:hover:after{
+            margin:0 0 0 15px;
+            transition:1s;
+        }
+    /*condiciones*/
+        table#ebay_newsletter tr#data-slides2+tr td{
+            background: white;
+            color:black;
+            padding:30px 20px;
+            text-align: justify;
+        }
+        table#ebay_newsletter tr#data-slides2+tr td ul{
+            margin:20px 0 0 0;
+        }
+        table#ebay_newsletter tr#data-slides2+tr td ul li{
+            margin:20px 0 0 0;
+        }
+        table#ebay_newsletter tr#data-slides2+tr td ul li a{
+            color:#af2a43;
+        }
+    /*socials*/
+        table#ebay_newsletter tr.data-socials td{
+            border-bottom:1px solid black;
+            padding:0 0 20px 0;
+        }
+        table#ebay_newsletter tr.data-socials td div{
+            display:inline-block;
+        }
+        table#ebay_newsletter tr.data-socials td div img{
+            width:25px;
+        }
+        table#ebay_newsletter tr.data-socials td button{
+            position: absolute;
+            right:0;
+            margin:20px 55px;
+            padding:8px 10px;
+            text-align: left;
+            background: transparent;
+            border:1px solid #aa5404;
+            color:#aa5404;
+            cursor: pointer;
+        }
+        table#ebay_newsletter tr.data-socials td button:after{
+            content:"";
+            background-image: url("../img/arrow.png");
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding:7px;
+            margin:0 0 0 10px;
+        }
+    /*copyright*/
+    table#ebay_newsletter tr:last-child td{
+        padding:10px 0 0 0;
+        color:gray!important;
+    }
